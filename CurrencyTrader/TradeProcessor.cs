@@ -1,6 +1,7 @@
 ﻿
 using CurrencyTrader.Contracts;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CurrencyTrader
 {
@@ -35,6 +36,7 @@ namespace CurrencyTrader
         }
         public void StoreTrades()
         {
+            //Task.Run(() => SynchTradeStorage.Persist(trades));
             tradeStorage.Persist(trades);
         }
 
